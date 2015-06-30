@@ -48,7 +48,9 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 
 App::error(function(Exception $exception, $code)
 {
-  $headline = "Sorry, That Should Not Have Happened!";
+  $headline = "OOPS! YOU DON'T WANT TO BE HERE";
+  // $headline is the line you want to display on the page.
+
   switch ($code)
   {
     case 400: // Bad Request

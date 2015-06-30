@@ -9,6 +9,7 @@ class ErrorController extends Controller
           {
             // From where user is coming
             $previous_url = URL::previous();
+            //The above one is for Laravel, you can use this also in PHP projects $previous_url = $_SERVER['HTTP_REFERER'];
 
             //User IP address
             $ip = Request::getClientIp();
