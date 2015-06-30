@@ -40,3 +40,6 @@ App::error(function(Exception $exception, $code)
 * Copy app/Error404.php and put in app/models (Error404.php is the class which is getting information).
 * Copy app/ErrorController.php and put in app/controllers. (ErrorController.php detect machine environment, sending e-mail to web-admin and showing 404error page to end-user)
 * Page to display end user should be in view folder and in this example you can find one app/views/error.html
+
+# Follow at:
+[Click Here](https://github.com/jawadmjn)
