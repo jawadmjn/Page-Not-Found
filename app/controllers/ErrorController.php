@@ -2,7 +2,7 @@
 
 class ErrorController extends Controller
 {
-    public function getError($exception, $code, $headline)
+    public function getError($exception, $code)
     {
         // for local testing and getting error emails just make not sign remove, i.e: if(Config::get('app.debug'))
         if(!Config::get('app.debug'))
@@ -77,6 +77,9 @@ class ErrorController extends Controller
             catch (Exception $e) {
             Log::info("$e\n");
             }
+
+            $headline = "OOPS! YOU DON'T WANT TO BE HERE";
+            // $headline is the line you want to display on the page.
 
             // Finally after reciving error email and loging the information show the HTML page to user you created for end-user.
             return View::make('view/error')->withCode($code)->withHeadline($headline);
