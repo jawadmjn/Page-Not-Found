@@ -8,7 +8,6 @@ Most important is this:
 ```
 App::error(function(Exception $exception, $code)
 {
-  $headline = "Sorry, That Should Not Have Happened!";
   switch ($code)
   {
     case 400: // Bad Request
