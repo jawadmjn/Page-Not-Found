@@ -11,26 +11,26 @@ App::error(function(Exception $exception, $code)
   switch ($code)
   {
     case 400: // Bad Request
-        return App::make("ErrorController")->getError($exception, $code, $headline);
+        return App::make("ErrorController")->getError($exception, $code);
       break;
     case 401: // Unauthorized
-        return App::make("ErrorController")->getError($exception, $code, $headline);
+        return App::make("ErrorController")->getError($exception, $code);
       break;
     case 403: // Forbidden
-        return App::make("ErrorController")->getError($exception, $code, $headline);
+        return App::make("ErrorController")->getError($exception, $code);
       break;
     case 404: // Not Found
       $headline="Sorry, The Page You Are Looking For Does Not Exist.";
-        return App::make("ErrorController")->getError($exception, $code, $headline);
+        return App::make("ErrorController")->getError($exception, $code);
       break;
     case 500: // Internal Server Error
-        return App::make("ErrorController")->getError($exception, $code, $headline);
+        return App::make("ErrorController")->getError($exception, $code);
       break;
     case 503: // Service Unavailable
-        return App::make("ErrorController")->getError($exception, $code, $headline);
+        return App::make("ErrorController")->getError($exception, $code);
       break;
     default:
-        return App::make("ErrorController")->getError($exception, $code, $headline);
+        return App::make("ErrorController")->getError($exception, $code);
       break;
   }
 });
